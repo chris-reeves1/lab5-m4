@@ -7,6 +7,7 @@ pipeline {
     stages{
         stage('init'){
             steps{
+                sh 'docker rm -f $(docker ps -aq) || true'
                 sh 'docker stop mynginx || true'
                 sh 'docker rm mynginx || true'
             }
