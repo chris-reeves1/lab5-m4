@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    environmnet {
+    environment {
         SECRET_VAR = credentials('secret_text')
         DOCKERHUB_CREDENTIALS = credentials('dockerhub')
     }
